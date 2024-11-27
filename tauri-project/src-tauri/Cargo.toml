@@ -1,0 +1,35 @@
+[package]
+name = "app"
+version = "1.0.0"
+description = "A Tauri Template"
+authors = ["Michael Araque"]
+license = "MIT OR Apache-2.0"
+repository = ""
+edition = "2021"
+rust-version = "1.65"
+build = "build.rs"
+
+[build-dependencies]
+tauri-build = { version = "1.5.1", features = [] }
+
+[dependencies]
+serde_json = "1.0.113"
+serde = { version = "1.0.196", features = ["derive"] }
+tauri = { version = "1.5.4", features = ["api-all", "icon-ico", "icon-png", "system-tray"] }
+tauri-plugin-window-state = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tauri-plugin-store = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tauri-plugin-autostart = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+lazy_static = "1.4"
+tauri-plugin-positioner = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]
+
+[profile.release]
+panic = "abort" # Strip expensive panic clean-up logic
+codegen-units = 1 # Compile crates one after another so the compiler can optimize better
+lto = true # Enables link to optimizations
+opt-level = "s" # Optimize for binary size
+# strip = true  # Automatically strip symbols from the binary.
