@@ -1,16 +1,15 @@
-import React from 'react'
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import SidebarLayout from '@/common/components/Common/Layouts/SidebarLayout';
-import WelcomePage from '@/pages/WelcomePage/WelcomePage';
-// import ZustandPage from '@/pages/ZustandPage';
-// import TauriPage from '@/pages/TauriPage/TauriPage';
+import { createBrowserRouter } from 'react-router-dom';
+import SidebarLayout from '@/components/Common/Layouts/SidebarLayout';
+import DashboardPage from '@/pages/DashboardPage';
 
-export const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<SidebarLayout />}>
-      <Route index element={<WelcomePage />} />
-      {/* <Route path="/tauri" element={<TauriPage />} />
-      <Route path="/zustand" element={<ZustandPage />} /> */}
-    </Route>
-  )
-)
+const MainRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <SidebarLayout />,
+    children: [
+      { index: true, element: <DashboardPage /> },
+    ],
+  },
+]);
+
+export default MainRouter;

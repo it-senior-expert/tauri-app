@@ -1,8 +1,6 @@
-# Boilerplate and Starter for Tauri with TauriJS, ReactJS +18, Vite, Typescript, Zustand and Chakra-UI
+# Website for Tauri with TauriJS, ReactJS +18, Vite, Typescript and Chakra-UI
 
-![](/docs/tauri-meteor-template.jpg)
 
-The template has initial has a meteorite based theme in order to generate a user interface based on something. ☄️☄️☄️☄️
 ## Resources
 
 - [ReactJS](https://reactjs.org/)
@@ -15,7 +13,7 @@ The template has initial has a meteorite based theme in order to generate a user
 - ⚡ Integrate [Zustand](https://github.com/pmndrs/zustand) complemented by [Mutative](b/mutative)
 
 ### ⭐️ Setup
-You need to install the prerequesites first to use this boilerplate, follow the instructions:
+You need to install the prerequesites first to use this website, follow the instructions:
 
 - Windows: [Setup here](https://tauri.app/v1/guides/getting-started/prerequisites#setting-up-windows)
 - Mac: [Setup here](https://tauri.app/v1/guides/getting-started/prerequisites#setting-up-macos)

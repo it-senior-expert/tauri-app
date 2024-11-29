@@ -5,8 +5,8 @@ import {
   MenuTheme,
   Input,
   Tabs,
-} from "@/config/theme/components";
-import { colors, fonts, layerStyles } from "@/config/theme/foundation";
+} from "@/components/Common/theme/components";
+import { colors, fonts, layerStyles } from "@/components/Common/theme/foundation";
 
 const borderRadius = {
   radii: {
@@ -81,7 +81,7 @@ const Theme = extendTheme({
   config: {
     initialColorMode: "dark",
     useSystemColorMode: false,
-    cssVarPrefix: "tauriboilerplate",
+    cssVarPrefix: "tauriwebsite",
   },
 });
 

@@ -1,1 +1,1 @@
-export { default as ZustandPage } from './ZustandPage';
+export { default as DashboardPage } from './DashboardPage';
